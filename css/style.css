@@ -1,0 +1,616 @@
+/* أساسي */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fefbf2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #4fc3f7;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header nav a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* بانر السلايدر */
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: 1rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+}
+
+.slides img.active {
+    display: block;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.7);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider .prev { left: 10px; }
+.slider .next { right: 10px; }
+
+/* الألعاب المميزة */
+.featured-games {
+    padding: 2rem;
+    text-align: center;
+}
+
+.featured-games h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ff6f61;
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.game-card {
+    background: #fff9c4;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* الشخصيات الكرتونية */
+.characters {
+    position: relative;
+    height: 200px;
+}
+
+.characters .char {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: bounce 2s infinite alternate;
+}
+
+.characters .char1 { left: 10%; }
+.characters .char2 { right: 10%; }
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
+}
+
+/* الفوتر */
+footer {
+    background: #4fc3f7;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .games-grid { flex-direction: column; align-items: center; }
+    .slider button { font-size: 1.5rem; padding: 0.3rem 0.6rem; }
+}
+
+
+/* فلترة */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.filter-section input, .filter-section select {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* شبكة الألعاب */
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.game-card {
+    background: #fff9c4;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-card button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #4fc3f7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.game-card button:hover {
+    background-color: #039be5;
+}
+
+/* صفحة تفاصيل اللعبة */
+.game-details {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.game-details .main-image img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.image-gallery .thumb {
+    width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.image-gallery .thumb:hover {
+    transform: scale(1.1);
+}
+
+.video-section {
+    margin-bottom: 1rem;
+}
+
+.game-info h3 {
+    color: #ff6f61;
+    margin-bottom: 0.5rem;
+}
+
+.game-info ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.game-info button {
+    padding: 0.7rem 1rem;
+    background-color: #4fc3f7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.game-info button:hover {
+    background-color: #039be5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-gallery { flex-wrap: wrap; }
+    .image-gallery .thumb { width: 80px; }
+}
+
+/* نفس تصميم صفحة الألعاب لتوحيد الشكل */
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.game-card {
+    background: #fff9c4;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-card button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.game-card button:hover {
+    background-color: #e53935;
+}
+
+/* صفحة الألعاب التعليمية */
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.game-card {
+    background: #e1f5fe;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-card button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #ffca28;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.game-card button:hover {
+    background-color: #ffb300;
+}
+
+/* فلترة البحث */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.filter-section input, .filter-section select {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+
+.contact-form-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fffde7;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form-section label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form-section textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.contact-form-section button {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #4fc3f7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.contact-form-section button:hover {
+    background-color: #039be5;
+}
+
+.form-message {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* صفحة من نحن */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.about-card {
+    background-color: #e8f5e9;
+    border-radius: 15px;
+    padding: 1.5rem;
+    max-width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+}
+
+.about-card h2 {
+    color: #4caf50;
+    margin-bottom: 0.5rem;
+}
+
+.about-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* قسم تسجيل الدخول */
+.login-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+/* نموذج تسجيل الدخول */
+.login-form {
+    background-color: #fff3e0;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.login-form button {
+    padding: 0.7rem 1rem;
+    background-color: #4fc3f7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.login-form button:hover {
+    background-color: #039be5;
+}
+
+.form-message {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* مجسم الطفل ثلاثي الأبعاد */
+.child-3d {
+    position: relative;
+    width: 180px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+/* الرأس */
+.child-3d .head {
+    width: 90px;
+    height: 90px;
+    background-color: #ffdbac;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: headSwing 3s infinite alternate ease-in-out;
+}
+
+/* العيون */
+.child-3d .eye {
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+}
+
+.child-3d .eye.left { left: 20px; animation: blink 5s infinite; }
+.child-3d .eye.right { right: 20px; animation: blink 5s infinite; }
+
+/* الفم */
+.child-3d .mouth {
+    width: 30px;
+    height: 10px;
+    background-color: #ff6f61;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* الجسم */
+.child-3d .body {
+    width: 70px;
+    height: 120px;
+    background-color: #ff6f61;
+    border-radius: 35px;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* الأذرع */
+.child-3d .arm {
+    width: 20px;
+    height: 90px;
+    background-color: #ffdbac;
+    position: absolute;
+    top: 100px;
+    border-radius: 15px;
+}
+
+.child-3d .arm.left {
+    left: -25px;
+    transform-origin: top center;
+    animation: armWave 2s infinite alternate;
+}
+
+.child-3d .arm.right {
+    right: -25px;
+    transform-origin: top center;
+}
+
+/* الأرجل */
+.child-3d .leg {
+    width: 20px;
+    height: 90px;
+    background-color: #ff6f61;
+    position: absolute;
+    top: 210px;
+    border-radius: 15px;
+}
+
+.child-3d .leg.left { left: 30px; }
+.child-3d .leg.right { right: 30px; }
+
+/* حركات الرأس والذراع */
+@keyframes headSwing {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(3deg); }
+    100% { transform: translateX(-50%) rotate(-3deg); }
+}
+
+@keyframes armWave {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(25deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes blink {
+    0%, 90%, 100% { height: 12px; }
+    95% { height: 2px; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-section { flex-direction: column; gap: 2rem; }
+}
+
